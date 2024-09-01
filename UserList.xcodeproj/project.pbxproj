@@ -18,6 +18,8 @@
 		2FFB64282AC6D255007F2F80 /* UserListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFB64272AC6D255007F2F80 /* UserListApp.swift */; };
 		2FFB642A2AC6D255007F2F80 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFB64292AC6D255007F2F80 /* UserListView.swift */; };
 		2FFB642C2AC6D256007F2F80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FFB642B2AC6D256007F2F80 /* Assets.xcassets */; };
+		3B01D85C2C8079F200ADB708 /* MockerUserListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B01D85B2C8079F200ADB708 /* MockerUserListRepository.swift */; };
+		3B9CC4552C7AADDC002F91B3 /* UserListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CC4542C7AADDC002F91B3 /* UserListViewModelTests.swift */; };
 		3BC4E68A2C767CCF00FCD97E /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC4E6892C767CCF00FCD97E /* UserListViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +48,8 @@
 		2FFB64292AC6D255007F2F80 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		2FFB642B2AC6D256007F2F80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2FFB64342AC6D256007F2F80 /* UserListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UserListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B01D85B2C8079F200ADB708 /* MockerUserListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockerUserListRepository.swift; sourceTree = "<group>"; };
+		3B9CC4542C7AADDC002F91B3 /* UserListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModelTests.swift; sourceTree = "<group>"; };
 		3BC4E6892C767CCF00FCD97E /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,7 +79,6 @@
 				3BC4E6862C767BF400FCD97E /* ViewModels */,
 				3BC4E6852C767BEB00FCD97E /* Models */,
 				3BC4E6882C767C2300FCD97E /* Data */,
-				2FEF0C6E2ACB416C004DB87C /* UserListResponse.swift */,
 				2FF9D9192ACB3CD800F3A6C5 /* HTTPClient */,
 			);
 			path = Sources;
@@ -129,10 +132,20 @@
 		2FFB64372AC6D256007F2F80 /* UserListTests */ = {
 			isa = PBXGroup;
 			children = (
+				3B9CC4562C7AB1AC002F91B3 /* Mocks */,
 				2F015BA72ACC938F009A098C /* UserListRepositoryTests.swift */,
 				2FB4823B2ACC98DD0016CBA7 /* UserList.xctestplan */,
+				3B9CC4542C7AADDC002F91B3 /* UserListViewModelTests.swift */,
 			);
 			path = UserListTests;
+			sourceTree = "<group>";
+		};
+		3B9CC4562C7AB1AC002F91B3 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				3B01D85B2C8079F200ADB708 /* MockerUserListRepository.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		3BC4E6852C767BEB00FCD97E /* Models */ = {
@@ -163,6 +176,7 @@
 		3BC4E6882C767C2300FCD97E /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				2FEF0C6E2ACB416C004DB87C /* UserListResponse.swift */,
 				2FF9D91E2ACB3DD400F3A6C5 /* UserListRepository.swift */,
 			);
 			path = Data;
@@ -284,7 +298,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B01D85C2C8079F200ADB708 /* MockerUserListRepository.swift in Sources */,
 				2F015BA82ACC938F009A098C /* UserListRepositoryTests.swift in Sources */,
+				3B9CC4552C7AADDC002F91B3 /* UserListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
