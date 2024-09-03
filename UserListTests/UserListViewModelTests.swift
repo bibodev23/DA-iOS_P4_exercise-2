@@ -32,6 +32,7 @@ final class UserListViewModelTests: XCTestCase {
     func testShouldLoadMoreData() {
         // Simulate loading users
         viewModel.fetchUsers()
+        
         let expectation = XCTestExpectation(description: "Data loaded")
         
         // Subscribe to the users property and fulfill the expectation when data is loaded
@@ -58,6 +59,7 @@ final class UserListViewModelTests: XCTestCase {
     func testFetchUsersSuccess() {
         // Trigger user data fetching
         viewModel.fetchUsers()
+        
         let expectation = XCTestExpectation(description: "Users fetched successfully")
         
         // Subscribe to the users property and fulfill expectation when users are loaded
@@ -71,7 +73,7 @@ final class UserListViewModelTests: XCTestCase {
             .store(in: &cancellables)
         // Wait for the expectation to be fulfilled
         wait(for: [expectation], timeout: 2.0)
-
+        
         // Ensure the loading state is false after fetching is complete
         XCTAssertFalse(viewModel.isLoading)
         // Verify that no error occurred and the correct users were fetched
@@ -127,6 +129,7 @@ final class UserListViewModelTests: XCTestCase {
         
         // Trigger user data fetching
         viewModel.fetchUsers()
+        
         let expectation = XCTestExpectation(description: "Empty user list fetched")
         // Subscribe to the users property and fulfill the expectation when the list is confirmed to be empty
         viewModel.$users
@@ -150,6 +153,7 @@ final class UserListViewModelTests: XCTestCase {
     func testReloadUsers() {
         //Initially load users
         viewModel.fetchUsers()
+        
         let fetchExpectation = XCTestExpectation(description: "Users fetched successfully")
         
         // Subscribe to the users property and fulfill the expectation when users are loaded

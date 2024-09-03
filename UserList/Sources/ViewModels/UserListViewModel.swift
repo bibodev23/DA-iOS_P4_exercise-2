@@ -47,12 +47,15 @@ final class UserListViewModel: ObservableObject {
             do {
                 // Attempt to fetch users from the repository
                 let users = try await repository.fetchUsers(quantity: 20)
-                // Append the fetched users to the existing users array
-                self.users.append(contentsOf: users)
-                // Reset the loading flag once the operation is complete
-                self.isLoading = false
                 
+                DispatchQueue.main.async {
+                    // Append the fetched users to the existing users array
+                    self.users.append(contentsOf: users)
+                    // Reset the loading flag once the operation is complete
+                    self.isLoading = false
+                }
             } catch {
+                
                 // Handle any errors that occur during fetching
                 print("Error fetching users: \(error.localizedDescription)")
                 self.errorMessage = "Failed to load users. Please try again later."
